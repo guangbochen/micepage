@@ -1,8 +1,9 @@
-### micepage application
+### micepage app
 
-1. setup the database 
-    ...* python manage.py init //initalise db
-    ...* python manage.py migrate //migrate db
-    ...* python manage.py update //update db to the head version accroding to ur models class
-2. run the app $python manage.py runserver
+1. Setup the database 
+    * `$ python manage.py init`
+    * `$ python manage.py migrate`
+    * `$ python manage.py update`
+
+2. Run the app via `$ python manage.py runserver`
 
