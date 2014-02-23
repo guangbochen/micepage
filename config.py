@@ -6,12 +6,13 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'smtp.googlemail.com'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = 'steven.guangbo.chen'
-    MAIL_PASSWORD = 'guangbo7789#'
-    FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
+    MAIL_PORT = 465
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = 'bob.guangbo.chen'
+    MAIL_PASSWORD = 'codeaccount'
+    FLASKY_MAIL_SUBJECT_PREFIX = '[Micepage]'
+    FLASKY_MAIL_SENDER = 'Micepage Admin <micepage@admin.com>'
 
     @staticmethod
     def init_app(app):
