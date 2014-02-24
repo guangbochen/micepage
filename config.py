@@ -11,8 +11,13 @@ class Config:
     MAIL_USE_SSL = True
     MAIL_USERNAME = 'bob.guangbo.chen'
     MAIL_PASSWORD = 'codeaccount'
-    FLASKY_MAIL_SUBJECT_PREFIX = '[Micepage]'
-    FLASKY_MAIL_SENDER = 'Micepage Admin <micepage@admin.com>'
+    APP_MAIL_SUBJECT_PREFIX = '[Micepage]'
+    APP_MAIL_SENDER = 'Micepage Admin <micepage@admin.com>'
+    # define the admin via email address 
+    APP_ADMINS = ['steven.guangbo.chen@gmail.com']
+    APP_POSTS_PER_PAGE = 20
+    APP_FOLLOWERS_PER_PAGE = 50
+    APP_COMMENTS_PER_PAGE = 30
 
     @staticmethod
     def init_app(app):
