@@ -1,0 +1,509 @@
+/* @import "./lib/bootstrap.min.css"; */
+/* @import "./lib/bootstrap-responsive.min.css"; */
+/* @import "./lib/datepicker.css"; */
+.navbar-inverse {
+  position: relative;
+}
+.navbar a.brand {
+  padding: 0 20px 0;
+  margin-top: -40px;
+/* kill some of the empty space above the logo, temporary. */
+}
+.navbar-inverse nav.navbar-inner {
+  background-color: #212a30;
+  background-image: none;
+  border-style: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+nav.navbar-inner ul.nav {
+  margin-top: 10px;
+}
+nav.navbar-inner .btn.btn-primary {
+  margin-top: 19px;
+  padding: 5px 14px 4px;
+}
+nav.navbar-inner ul.nav .btn-primary:hover {
+  background-position: none;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle {
+  background: transparent;
+}
+.profile-dropdown img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+#sidebar {
+  box-sizing: border-box;
+  padding: 10px 0 100px 0;
+}
+#sidebar .section {
+  padding: 10px 0;
+}
+#sidebar h4 {
+  padding: 4px 0 4px 10px;
+}
+#sidebar .notifications h4,
+#sidebar .invitations h4 {
+  border-bottom: 1px dotted #eee;
+  margin-bottom: 0;
+}
+#sidebar .notifications h4 small,
+#sidebar .invitations h4 small {
+  padding-top: 4px;
+  padding-right: 8px;
+}
+#sidebar .notifications ul,
+#sidebar .invitations ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#sidebar .notifications ul li,
+#sidebar .invitations ul li {
+  padding: 10px;
+  border-bottom: 1px dotted #eee;
+  color: #aaa;
+}
+#sidebar .notifications ul li.unread,
+#sidebar .invitations ul li.unread,
+#sidebar .notifications ul li.invitation,
+#sidebar .invitations ul li.invitation {
+  background-color: #fff;
+  color: #000;
+}
+#sidebar .notifications ul li h5,
+#sidebar .invitations ul li h5,
+#sidebar .notifications ul li p,
+#sidebar .invitations ul li p {
+  margin: 0;
+}
+#sidebar .notifications ul li h5 i,
+#sidebar .invitations ul li h5 i {
+  margin: 4px 8px 0 0;
+  opacity: 0.2;
+}
+#sidebar .notifications ul li h5 i:hover,
+#sidebar .invitations ul li h5 i:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+#sidebar .notifications ul li:hover,
+#sidebar .invitations ul li:hover {
+  background-color: #eee;
+}
+.invisible-form {
+  display: none;
+}
+#hero-bg {
+  background-color: #212a30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 440px;
+  z-index: 0;
+}
+#home-hero {
+  background-color: #3780bd;
+  z-index: 1;
+  color: #fff;
+  position: relative;
+  text-align: right;
+  margin-top: 0;
+  border-radius: 0px;
+  box-shadow: 0px 10px 20px #222;
+}
+#home-hero p {
+  margin-top: 30px;
+}
+#home-hero input {
+  height: 21px;
+  margin: 0 8px 0 0;
+  border: 1px solid #262626;
+  font-size: 14pt;
+  line-height: 29px;
+  padding: 8px;
+}
+.feature-row {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.feature-row ul {
+  list-style-type: square;
+}
+.feature-row ul li {
+  padding: 2px 0;
+}
+h3.top-heading {
+  margin-bottom: 0;
+}
+h2.bottom-heading {
+  margin-top: 0;
+  line-height: 10px;
+}
+.widget img {
+  margin: 10px 20px 10px 10px;
+}
+.widget p {
+  margin: 10px;
+  font-size: 14pt;
+  line-height: 20pt;
+}
+#video-row p {
+  font-size: 14pt;
+  line-height: 20pt;
+  margin-top: 20px;
+}
+#video-row .video {
+  text-align: right;
+}
+#main-stack {
+  border-left: 1px solid #eee;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 0;
+  min-height: 400px;
+}
+#dashboard .span3,
+#dashboard .span9 {
+  margin-left: 19px;
+}
+#dashboard .empty-dashboard {
+  text-align: center;
+  margin-top: 100px;
+}
+#dashboard .empty-dashboard p {
+  font-size: 14pt;
+  margin: 20px 0;
+}
+#dashboard h3 {
+  margin-top: 18px;
+}
+#dashboard #event-container {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+#dashboard #event-container .event {
+  position: relative;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+#dashboard #event-container .event .date {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 8px;
+  color: #34495e;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#dashboard #event-container .event .logo {
+  float: left;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#dashboard #event-container .event h4 {
+  margin-left: 58px;
+  line-height: 28px;
+}
+#dashboard #event-container .event div.description {
+  height: 80px;
+  margin-top: 24px;
+  overflow: hidden;
+}
+#dashboard #create-event-modal .at {
+  line-height: 30px;
+  vertical-align: top;
+  padding: 0 4px;
+}
+.show {
+  overflow: hidden;
+  padding-left: 20px;
+}
+.show .tab-content {
+  padding-bottom: 80px;
+}
+.show .title-wrapper {
+  display: table;
+}
+.show .title-wrapper .event-title {
+  display: table-row;
+}
+.show .title-wrapper .event-title h2 {
+  display: table-cell;
+  padding-top: 20px;
+}
+.show .title-wrapper .event-title h2 div {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 6px 0;
+  display: inline-block;
+}
+.show .title-wrapper .event-title h2 div img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.show .title-wrapper .event-title .controls {
+  margin-left: 1em;
+}
+.show .title-wrapper .event-title .controls i {
+  cursor: pointer;
+}
+.show .meta-wrapper {
+  display: table;
+  width: 75%;
+  float: left;
+}
+.show .meta-wrapper > div {
+  display: table-row;
+}
+.show .meta-wrapper > div > div {
+  display: table-cell;
+}
+.show .meta-wrapper .dates p {
+  margin-top: 10px;
+  font-size: 14pt;
+}
+.show .meta-wrapper #edit-event-location-link {
+  vertical-align: 4px;
+  margin-left: 4px;
+}
+.show .meta-wrapper #event-description {
+  vertical-align: top;
+  width: 75%;
+  padding-left: 1px;
+}
+.show .meta-wrapper #event-description .description {
+  min-height: 200px;
+}
+.show .meta-wrapper #event-map:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+.show #event-map {
+  float: right;
+  width: 170px;
+  height: 170px;
+  border: 1px solid #777;
+  text-align: center;
+}
+.show #event-map a.empty {
+  line-height: 170px;
+}
+.show #event-tabs {
+  clear: both;
+  margin: 20px 0;
+}
+.show #attendees-tab a + a {
+  margin: 0 8px;
+}
+.show #attendees-tab div.dropdown {
+  display: inline;
+}
+.show #attendees-tab div.dropdown .file-input-item {
+  padding: 10px 20px;
+}
+.show #attendees-tab div.dropdown .file-input-item input {
+  height: 20px;
+  line-height: 14px;
+}
+.show #speakers-tab ul,
+.show #sessions-tab ul {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+}
+.show #speakers-tab ul li img,
+.show #sessions-tab ul li img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+.show #speakers-tab ul li div,
+.show #sessions-tab ul li div {
+  float: left;
+}
+.show #speakers-tab ul li.session,
+.show #sessions-tab ul li.session {
+  border-bottom: 1px solid #ddd;
+  padding: 0 12px;
+}
+.show #speakers-tab ul li.session:first-child,
+.show #sessions-tab ul li.session:first-child {
+  margin-top: 16px;
+  border-top: 1px solid #ddd;
+}
+.show #speakers-tab ul li.session.break,
+.show #sessions-tab ul li.session.break {
+  background-color: #eee;
+}
+.show #speakers-tab ul li.session:hover .controls,
+.show #sessions-tab ul li.session:hover .controls {
+  display: block;
+}
+.show #speakers-tab ul li.session .controls,
+.show #sessions-tab ul li.session .controls {
+  display: none;
+}
+.show #speakers-tab ul li.session .controls i,
+.show #sessions-tab ul li.session .controls i {
+  cursor: pointer;
+}
+.show #speakers-tab ul li.session .nav-pills,
+.show #sessions-tab ul li.session .nav-pills {
+  margin: 0 0 0 -12px;
+}
+.show #speakers-tab ul li.session .nav-pills .no-link,
+.show #sessions-tab ul li.session .nav-pills .no-link {
+  padding: 7px 8px;
+}
+.show #speakers-tab ul li.event-resource,
+.show #sessions-tab ul li.event-resource {
+  position: relative;
+}
+.show #speakers-tab ul li.event-resource .icon-remove,
+.show #sessions-tab ul li.event-resource .icon-remove {
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  cursor: pointer;
+}
+.show #speakers-tab ul li.file-input-item p,
+.show #sessions-tab ul li.file-input-item p {
+  margin: 0 18px 4px 18px;
+}
+.show #speakers-tab ul li.file-input-item input,
+.show #sessions-tab ul li.file-input-item input {
+  padding-top: 8px;
+  padding-left: 16px;
+  line-height: 0;
+  width: 250px;
+  margin-right: 12px;
+}
+.profile {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.profile .picture {
+  overflow: hidden;
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  border: 1px solid #777;
+  text-align: center;
+}
+.profile .picture a {
+  line-height: 170px;
+}
+.profile .controls {
+  text-align: center;
+  margin-top: 4px;
+}
+.profile form {
+  margin: 0;
+}
+.profile form .profile-pic-input {
+  display: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+* {
+  font-family: 'Lato';
+}
+.alert {
+  margin-top: 16px;
+}
+footer {
+  min-height: 100px;
+  border-top: 1px dotted #ddd;
+  text-align: center;
+  padding-top: 30px;
+}
+footer a,
+footer span {
+  margin: 0 20px;
+}
+.center-block {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+.editable-container {
+  position: relative;
+}
+.editable-container .icon-pencil {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  display: none;
+  cursor: pointer;
+  z-index: 0;
+}
+.editable-container:hover .icon-pencil {
+  display: block;
+}
+.editable-container:hover .mce-edit-focus + .icon-pencil {
+  display: none;
+}
+p.success {
+  color: #008000;
+}
+p.error {
+  color: #f00;
+}
+/*
+ * Required by spine.js to hide inactive controllers
+ */
+.stack > *:not(.active) {
+  display: none;
+}
+@media print {
+  .navbar,
+  #sidebar,
+  footer {
+    display: none;
+  }
+  #main-stack {
+    border-style: none;
+  }
+  #main-stack .publish,
+  #main-stack .meta-wrapper {
+    display: none;
+  }
+  #main-stack #event-tabs {
+    display: none;
+  }
+  #main-stack .session .nav-pills {
+    display: none;
+  }
+  #main-stack a.btn {
+    display: none;
+  }
+  #main-stack #speakers-tab,
+  #main-stack #sessions-tab {
+    margin-top: 40px;
+    clear: both;
+    display: block;
+  }
+}

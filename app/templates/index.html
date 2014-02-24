@@ -6,27 +6,87 @@
 {% block title %}Micepage{% endblock %}
 
 {% block page_content %}
-<div class="page-header">
-    <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+
+{% if current_user.is_authenticated() %}
+<!-- <div class="page-header"> -->
+<!--     <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1> -->
+<!-- </div> -->
+<!-- <div> -->
+<!--     {% if current_user.can(Permission.WRITE_ARTICLES) %} -->
+<!--     {{ wtf.quick_form(form) }} -->
+<!--     {% endif %} -->
+<!-- </div> -->
+<!-- <div class="post-tabs"> -->
+<!--     <ul class="nav nav-tabs"> -->
+<!--         <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_all') }}">All</a></li> -->
+<!--         {% if current_user.is_authenticated() %} -->
+<!--         <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li> -->
+<!--         {% endif %} -->
+<!--     </ul> -->
+<!--     {% include '_posts.html' %} -->
+<!-- </div> -->
+<!-- {% if pagination %} -->
+<!-- <div class="pagination"> -->
+<!--     {{ macros.pagination_widget(pagination, '.index') }} -->
+<!-- </div> -->
+<!-- {% endif %} -->
+
+{% else %}
+
+<div id="hero-bg"></div>
+
+<div class="hero-unit" id="home-hero">
+  <h1>Take control of your meetings</h1>
+  <h1>events</h1>
+  <h1>time.</h1>
+  <p>
+    <form id="interest-form">
+      <!-- <input type="email" class="email" placeholder="Email address..."> -->
+      <br>
+      <a href={{ url_for('auth.register') }} class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-star"></span>
+          Register your interest
+      </a>
+    </form>
+  </p>
 </div>
-<div>
-    {% if current_user.can(Permission.WRITE_ARTICLES) %}
-    {{ wtf.quick_form(form) }}
-    {% endif %}
+
+<div class="row feature-row">
+    <div class="col-md-2 col-md-offset-1 widget">
+        <img src="http://placehold.it/150x150">
+    </div>
+    <div class="col-md-3 widget">
+        <p>Free Option</p>
+        <ul>
+            <li>1 administrator</li>
+            <li>1 guest speaker</li>
+            <li>invite up to 20 attendees per event</li>
+        </ul>
+    </div>
+
+    <div class="col-md-2 col-md-offset-1 widget"><img src="http://placehold.it/150x150"></div>
+    <div class="col-md-3 widget">
+        <p>$35 per month</p>
+        <ul>
+            <li>Unlimited events</li>
+            <li>Up to 5 administrators</li>
+            <li>Up to 25 guest speakers</li>
+            <li>Unlimited attendees</li>
+        </ul>
+    </div>
 </div>
-<div class="post-tabs">
-    <ul class="nav nav-tabs">
-        <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_all') }}">All</a></li>
-        {% if current_user.is_authenticated() %}
-        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li>
-        {% endif %}
-    </ul>
-    {% include '_posts.html' %}
+
+<div class="row" id="video-row">
+    <div class="col-md-10 col-md-offset-1">
+        <p>Designed with the vision to help you work smarter, not harder, 
+        MicePage integrates seamlessly into your daily activties. 
+        Whether you’re organising a congress for 1,000 people, or an internal meeting for five,  
+        MicePage delivers a range of unique features that enable you to regain time and control over your events.
+        </p>
+        <p>MicePage, making MICE easy.</p>
+    </div>
 </div>
-{% if pagination %}
-<div class="pagination">
-    {{ macros.pagination_widget(pagination, '.index') }}
-</div>
+
 {% endif %}
 {% endblock %}
 

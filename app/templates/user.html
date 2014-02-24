@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
 
-{% block title %}Flasky - {{ user.username }}{% endblock %}
+{% block title %}Micepage - {{ user.username }}{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
+    <img class="img-rounded profile-thumbnail pull-left" src="{{ user.gravatar(size=256) }}">
     <div class="profile-header">
         <h1>{{ user.username }}</h1>
         {% if user.name or user.location %}
@@ -32,6 +32,11 @@
             {% endif %}
             <a href="{{ url_for('.followers', username=user.username) }}">Followers: <span class="badge">{{ user.followers.count() - 1 }}</span></a>
             <a href="{{ url_for('.followed_by', username=user.username) }}">Following: <span class="badge">{{ user.followed.count() - 1 }}</span></a>
+
+            <div>
+                <img class="img-rounded" src="{{ user.gravatar(size=20) }}">
+                <strong><a href="https://gravatar.com" target="_blank">Change your avatar at Gravatar.com</a></strong>.
+            </div>
             {% if current_user.is_authenticated() and user != current_user and user.is_following(current_user) %}
             | <span class="label label-default">Follows you</span>
             {% endif %}
